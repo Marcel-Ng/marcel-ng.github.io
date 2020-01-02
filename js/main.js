@@ -168,7 +168,14 @@
 (function() {
 	function invertLists(){
 		var trianingsList =  document.getElementsByClassName('training');
-		console.log(trianingsList);
+		for(let i = 0; i < trianingsList.length; i++){
+			const isEven = (i % 2 === 0)? true : false;
+			if(isEven === true){
+				trianingsList[i].classList.add('timeline-unverted');
+			}else{
+				trianingsList[i].classList.add('timeline-inverted');
+			}
+		}
 	}
 		
 	invertLists();
